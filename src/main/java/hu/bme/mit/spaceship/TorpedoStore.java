@@ -41,7 +41,7 @@ public class TorpedoStore {
 
     if (r >= FAILURE_RATE) {
       // successful firing
-      this.torpedoCount -= numberOfTorpedos;
+      this.torpedoCount -= numberOfTorpedos;  //There is no =- operator in Java. If you try to write x =- 5, it will not be interpreted as a single operator. Instead, the expression is parsed as = -numberOfTorpedos
       success = true;
     } else {
       // simulated failure
